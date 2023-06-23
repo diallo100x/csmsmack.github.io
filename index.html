@@ -96,18 +96,18 @@
         <div class="title">Celebrity Social Media Smack Down</div>
         
         <div class="images-container">
-            <img class="image" src="placeholder1.jpg" alt="Contestant 1">
+            <img class="image" src="https://github.com/diallo100x/csmsmack.github.io/raw/main/elon%20musk%20mma.jpg" alt="Elon Musk">
             <div class="vs">VS</div>
-            <img class="image" src="placeholder2.jpg" alt="Contestant 2">
+            <img class="image" src="https://github.com/diallo100x/csmsmack.github.io/raw/main/mark%20zuck%20mma.jpg" alt="Mark Zuckerberg">
         </div>
         
         <div class="names">
-            <div>Contestant 1</div>
-            <div>Contestant 2</div>
+            <div>Elon Musk</div>
+            <div>Mark Zuckerberg</div>
         </div>
         
-        <button class="vote-button" onclick="vote(1)">Vote for Contestant 1</button>
-        <button class="vote-button" onclick="vote(2)">Vote for Contestant 2</button>
+        <button class="vote-button" onclick="vote(1)">Vote for Elon Musk</button>
+        <button class="vote-button" onclick="vote(2)">Vote for Mark Zuckerberg</button>
         
         <hr>
         
@@ -115,4 +115,29 @@
             <div class="leaderboard-title">Leaderboard:</div>
             <div class="leaderboard-item">1. Player 1 - $10</div>
             <div class="leaderboard-item">2. Player 2 - $8</div>
-            <div class="leaderboard-item">3. Player 3 - $7</div
+            <div class="leaderboard-item">3. Player 3 - $7</div>
+        </div>
+        
+        <button class="mint-button hidden">Mint Title Belt NFT</button>
+    </div>
+    
+    <script>
+        // Function to handle voting
+        function vote(contestant) {
+            // Placeholder function for voting logic
+            // Replace this with your actual voting implementation
+            
+            // Show leaderboard
+            document.querySelector('.leaderboard').classList.remove('hidden');
+            
+            // Check if the user is a top 10 winner
+            var isTopWinner = false; // Replace with your logic to determine if the user is a top winner
+            
+            if (isTopWinner) {
+                // Display mint button for top winners
+                document.querySelector('.mint-button').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
