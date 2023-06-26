@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Social Media Smack Down</title>
+    <style>
+        /* CSS styles */
+        body {
+            background-color: black;
+            color: gold;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .voting-section {
+            margin-bottom: 40px;
+        }
+        
+        .contestants {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contestant {
+            margin: 0 20px;
+        }
+        
+        .contestant img {
+            width: 200px;
+            height: auto;
+        }
+        
+        .vs {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+        
+        .name {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .leaderboard {
+            margin-bottom: 20px;
+        }
+        
+        .leaderboard-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .leaderboard-item {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .title-belt {
+            margin-top: 20px;
+        }
+        
+        .title-belt img {
+            width: 400px;
+            height: auto;
+        }
+        
+        .mint-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: gold;
+            color: black;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .web3-connect {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            font-size: 14px;
+            background-color: gold;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="web3-connect">Connect Wallet</button>
+        <div class="title">Celebrity Social Media Smack Down</div>
+        
+        <!-- Voting Section -->
+        <div class="voting-section">
+            <div class="contestants">
+                <div class="contestant">
+                    <img src="https://raw.githubusercontent.com/diallo100x/csmsmack.github.io/main/elon%20musk%20mma.jpg" alt="Elon Musk">
+                    <div class="name">Elon Musk</div>
+                    <button onclick="vote('musk')">Vote for Musk</button>
+                </div>
+                <div class="vs">VS</div>
+                <div class="contestant">
+                    <img src="https://raw.githubusercontent.com/diallo100x/csmsmack.github.io/main/mark%20zuck%20mma.jpg" alt="Mark Zuckerberg">
+                    <div class="name">Mark Zuckerberg</div>
+                    <button onclick="vote('zuckerberg')">Vote for Zuckerberg</button>
+                </div>
+            </div>
+            <div class="result hidden">
+                <div class="winner"></div>
+            </div>
+        </div>
+        
+        <!-- Leaderboard Section -->
+        <div class="leaderboard hidden">
+            <div class="leaderboard-title">Leaderboard:</div>
+            <div id="wallet-name" class="leaderboard-item"></div>
+            <div class="leaderboard-item">2. Player 2 - 8</div>
+            <div class="leaderboard-item">3. Player 3 - 7</div>
+        </div>
+        
+        <div class="title-belt">
+            <img src="https://raw.githubusercontent.com/diallo100x/csmsmack.github.io/main/undisputed%20title%20belt.png" alt="Title Belt">
+        </div>
+        
+        <button class="mint-button hidden">Mint Title Belt NFT</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script>
+    <script>
+        // Web3 connect logic and other scripts
+    </script>
+</body>
+</html>
