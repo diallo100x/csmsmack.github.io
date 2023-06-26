@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celebrity Social Media Smack Down</title>
     <style>
+        /* CSS styles */
         body {
-            font-family: Arial, sans-serif;
+            background-color: black;
+            color: gold;
         }
         
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
         
         .title {
@@ -22,41 +22,35 @@
             margin-bottom: 20px;
         }
         
-        .images-container {
+        .voting-section {
+            margin-bottom: 40px;
+        }
+        
+        .contestants {
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
         }
         
-        .image {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin: 10px;
+        .contestant {
+            margin: 0 20px;
         }
         
-        .vs {
-            font-size: 36px;
-            font-weight: bold;
+        .contestant img {
+            width: 200px;
+            height: auto;
         }
         
-        .names {
-            margin-bottom: 20px;
-        }
-        
-        .vote-button {
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
+        .name {
+            margin-top: 10px;
             font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
         }
         
-        .vote-button:hover {
-            background-color: #45a049;
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
         
         .leaderboard {
@@ -64,29 +58,23 @@
         }
         
         .leaderboard-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             margin-bottom: 10px;
         }
         
         .leaderboard-item {
+            font-size: 14px;
             margin-bottom: 5px;
         }
         
         .mint-button {
-            background-color: #2196F3;
-            color: #fff;
-            border: none;
             padding: 10px 20px;
             font-size: 16px;
+            background-color: gold;
+            color: black;
+            border: none;
             cursor: pointer;
-        }
-        
-        .mint-button:hover {
-            background-color: #1976D2;
-        }
-        
-        .hidden {
             display: none;
         }
     </style>
@@ -95,49 +83,40 @@
     <div class="container">
         <div class="title">Celebrity Social Media Smack Down</div>
         
-        <div class="images-container">
-            <img class="image" src="https://github.com/diallo100x/csmsmack.github.io/raw/main/elon%20musk%20mma.jpg" alt="Elon Musk">
-            <div class="vs">VS</div>
-            <img class="image" src="https://github.com/diallo100x/csmsmack.github.io/raw/main/mark%20zuck%20mma.jpg" alt="Mark Zuckerberg">
+        <!-- Voting Section -->
+        <div class="voting-section">
+            <div class="contestants">
+                <div class="contestant">
+                    <img src="https://raw.githubusercontent.com/diallo100x/csmsmack.github.io/main/elon%20musk%20mma.jpg" alt="Elon Musk">
+                    <div class="name">Elon Musk</div>
+                    <button onclick="vote('musk')">Vote for Musk</button>
+                </div>
+                <div class="vs">VS</div>
+                <div class="contestant">
+                    <img src="https://raw.githubusercontent.com/diallo100x/csmsmack.github.io/main/mark%20zuck%20mma.jpg" alt="Mark Zuckerberg">
+                    <div class="name">Mark Zuckerberg</div>
+                    <button onclick="vote('zuckerberg')">Vote for Zuckerberg</button>
+                </div>
+            </div>
+            <div class="result hidden">
+                <div class="winner"></div>
+            </div>
         </div>
         
-        <div class="names">
-            <div>Elon Musk</div>
-            <div>Mark Zuckerberg</div>
-        </div>
-        
-        <button class="vote-button" onclick="vote(1)">Vote for Elon Musk</button>
-        <button class="vote-button" onclick="vote(2)">Vote for Mark Zuckerberg</button>
-        
-        <hr>
-        
+        <!-- Leaderboard Section -->
         <div class="leaderboard hidden">
             <div class="leaderboard-title">Leaderboard:</div>
-            <div class="leaderboard-item">1. Player 1 - $10</div>
-            <div class="leaderboard-item">2. Player 2 - $8</div>
-            <div class="leaderboard-item">3. Player 3 - $7</div>
+            <div id="wallet-name" class="leaderboard-item"></div>
+            <div class="leaderboard-item">2. Player 2 - 8</div>
+            <div class="leaderboard-item">3. Player 3 - 7</div>
         </div>
         
         <button class="mint-button hidden">Mint Title Belt NFT</button>
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script>
     <script>
-        // Function to handle voting
-        function vote(contestant) {
-            // Placeholder function for voting logic
-            // Replace this with your actual voting implementation
-            
-            // Show leaderboard
-            document.querySelector('.leaderboard').classList.remove('hidden');
-            
-            // Check if the user is a top 10 winner
-            var isTopWinner = false; // Replace with your logic to determine if the user is a top winner
-            
-            if (isTopWinner) {
-                // Display mint button for top winners
-                document.querySelector('.mint-button').classList.remove('hidden');
-            }
-        }
+        // Voting logic and other scripts
     </script>
 </body>
 </html>
